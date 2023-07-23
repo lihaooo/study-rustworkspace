@@ -11,6 +11,7 @@ fn main() {
     // thread_rng 的意思是线程局部的随机数生成器 random number generator
     // gen_range() 方法生成一个指定范围内的随机数
     // 它是一个特定线程的本地变量
+    // i32 为 32 位有符号整数，如果是 u32 则不允许为负数
     let secret_number: i32 = rand::thread_rng().gen_range(-100..100);
 
     // println!("The secret number is: {}", secret_number);
