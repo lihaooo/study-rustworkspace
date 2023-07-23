@@ -30,12 +30,14 @@ fn main() {
             .read_line(&mut guess)
             .expect("Failed to read line");
 
+        // [ 改造前 ]
         // 将 guess 变量从 String 类型转换为 i32 类型
         // trim() 方法用于去除字符串首尾的空白字符
         // parse() 方法将字符串解析为数字
         // expect() 方法用于错误处理，处理 Result 类型的错误，如果出错则打印出错误信息
         // let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
+        // [ 改造后 ]
         // 使用 match 表达式处理 Result 类型的错误
         // Ok(num) 匹配成功时返回 num
         // Err(_) 匹配失败时返回 _，_ 为通配符
