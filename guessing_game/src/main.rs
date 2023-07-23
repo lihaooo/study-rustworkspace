@@ -11,7 +11,7 @@ fn main() {
     // thread_rng 的意思是线程局部的随机数生成器 random number generator
     // gen_range() 方法生成一个指定范围内的随机数
     // 它是一个特定线程的本地变量
-    let secret_number: u32 = rand::thread_rng().gen_range(1..101);
+    let secret_number: i32 = rand::thread_rng().gen_range(-100..100);
 
     // println!("The secret number is: {}", secret_number);
 
@@ -35,13 +35,13 @@ fn main() {
         // trim() 方法用于去除字符串首尾的空白字符
         // parse() 方法将字符串解析为数字
         // expect() 方法用于错误处理，处理 Result 类型的错误，如果出错则打印出错误信息
-        // let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        // let guess: i32 = guess.trim().parse().expect("Please type a number!");
 
         // [ 改造后 ]
         // 使用 match 表达式处理 Result 类型的错误
         // Ok(num) 匹配成功时返回 num
         // Err(_) 匹配失败时返回 _，_ 为通配符
-        let guess: u32 = match guess.trim().parse() {
+        let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
