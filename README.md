@@ -1,3 +1,5 @@
+<img alt="cuddlyferris.svg" src="cuddlyferris.svg" width="120"/>
+
 # `study-rustworkspace`: A Comprehensive Rust Development Workspace
 
 `study-rustworkspace` stands as an exhaustive repository encapsulating a myriad of specialized projects, each devised throughout an advanced expedition into Rust's vast landscape. Methodically curated, this workspace is a testament to rigorous Rust learning, infused with in-depth annotations and methodological insights.

@@ -1,4 +1,5 @@
 [workspace]
 members = [
-    "guessing_game" # 01. 一个猜随机生成数字的游戏
+    "guessing_game", # 01. 一个猜随机生成数字的游戏
+    "variables",
 ]
