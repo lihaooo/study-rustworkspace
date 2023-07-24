@@ -11,7 +11,7 @@ fn main() {
     // thread_rng 的意思是线程局部的随机数生成器 random number generator
     // gen_range() 方法生成一个指定范围内的随机数
     // 它是一个特定线程的本地变量
-    // i32 为 32 位有符号整数，如果是 u32 则不允许为负数
+    // i32 为 32 位有符号整数, 如果是 u32 则不允许为负数
     let secret_number: i32 = rand::thread_rng().gen_range(-100..100);
 
     // println!("The secret number is: {}", secret_number);
@@ -19,14 +19,14 @@ fn main() {
     loop {
         println!("Please input your guess.");
 
-        // 声明一个 mut 变量 guess，类型为 String
+        // 声明一个 mut 变量 guess, 类型为 String
         // 调用 String 类的构造函数 new() 创建一个新的 String 对象
         // 将其赋值给 guess 变量
         let mut guess = String::new();
 
         // 调用 io::stdin()
         // read_line() 方法读取用户输入绑定到变量 guess 上
-        // expect() 方法用于错误处理，处理 io::Result 类型的错误，如果出错则打印出错误信息
+        // expect() 方法用于错误处理, 处理 io::Result 类型的错误, 如果出错则打印出错误信息
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
@@ -35,13 +35,13 @@ fn main() {
         // 将 guess 变量从 String 类型转换为 i32 类型
         // trim() 方法用于去除字符串首尾的空白字符
         // parse() 方法将字符串解析为数字
-        // expect() 方法用于错误处理，处理 Result 类型的错误，如果出错则打印出错误信息
+        // expect() 方法用于错误处理, 处理 Result 类型的错误, 如果出错则打印出错误信息
         // let guess: i32 = guess.trim().parse().expect("Please type a number!");
 
         // [ 改造后 ]
         // 使用 match 表达式处理 Result 类型的错误
         // Ok(num) 匹配成功时返回 num
-        // Err(_) 匹配失败时返回 _，_ 为通配符
+        // Err(_) 匹配失败时返回 _, _ 为通配符
         let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,

@@ -1,9 +1,9 @@
 [package]
-name = "guessing_game" # 包名，可以和目录名不同，但原则上应该保持一致
-version = "0.1.0" # 项目的 sermer 版本号，可以使用 0.1 或者 0.1.0，但是推荐使用 0.1.0
-edition = "2021" # 2021 是 Rust 2021 Edition 的简写，这个字段是可选的，如果没有指定，Cargo 会根据 Rust 版本号自动推断
+name = "guessing_game" # 包名, 可以和目录名不同, 但原则上应该保持一致
+version = "0.1.0" # 项目的 sermer 版本号, 可以使用 0.1 或者 0.1.0, 但是推荐使用 0.1.0
+edition = "2021" # 2021 是 Rust 2021 Edition 的简写, 这个字段是可选的, 如果没有指定, Cargo 会根据 Rust 版本号自动推断
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rand = "0.8.5" # 版本号是 sermver 格式的，可以允许写 0.8 或者 0 来扩大范围，提高兼容性和允许自动升级的空间
+rand = "0.8.5" # 版本号是 sermver 格式的, 可以允许写 0.8 或者 0 来扩大范围, 提高兼容性和允许自动升级的空间
