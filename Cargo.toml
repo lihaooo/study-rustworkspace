@@ -1,5 +1,6 @@
 [workspace]
 members = [
     "guessing_game", # 01. 一个猜随机生成数字的游戏
-    "variables",
+    "variables", # 02, 变量相关的一些练习
+    "functions", # 03, 函数、注释和控制流相关的一些练习
 ]
