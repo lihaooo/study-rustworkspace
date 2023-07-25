@@ -4,4 +4,5 @@ members = [
     "variables", # 02, 变量相关的一些练习
     "functions", # 03, 函数和注释相关的一些练习
     "branches", # 04, 控制流相关的一些练习
+    "ownership", # 05, 所有权相关的一些练习
 ]
