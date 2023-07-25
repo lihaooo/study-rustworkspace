@@ -51,7 +51,7 @@ fn main() {
 
         // 使用 match 表达式处理 Ordering 类型的值
         // cmp() 方法比较两个值并返回一个 Ordering 类型的值
-        // Ordering 类型有三个值：Less、Greater、Equal
+        // Ordering 类型有三个值：Less, Greater, Equal
         // match 表达式会将 guess.cmp(&secret_number) 的返回值与三个分支进行比较
         match guess.cmp(&secret_number) {
             std::cmp::Ordering::Less => println!("Too small!"),
