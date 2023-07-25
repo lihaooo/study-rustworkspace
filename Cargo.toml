@@ -6,4 +6,5 @@ members = [
     "branches", # 04, 控制流相关的一些练习
     "ownership", # 05, 所有权相关的一些练习
     "structure", # 06, 结构体相关的一些练习
+    "rectangles", # 07, 一个长度形相关的程序, 用于练习结构体和方法
 ]
