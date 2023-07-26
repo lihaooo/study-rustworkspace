@@ -10,4 +10,8 @@ members = [
     "matches", # 08, 枚举, 匹配和 if let 简单控制流
     "crates", # 09, 模块和包相关的一些练习
     "collections", # 10, 集合相关的一些练习
+    "errors", # 11, 错误处理相关的一些练习
 ]
+
+[profile.release]
+panic = "abort"
