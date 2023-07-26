@@ -1,0 +1,18 @@
+[package]
+name = "errors"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+# profile 必须在 root package 中设置，workspace 中的 profile 会覆盖 root package 中的 profile
+# [profile]
+# 设置 panic 为 abort，这样就不会生成 panic 的代码, 也就不会有 panic 的 unwind 操作
+# unwind 操作会生成一些额外的代码，这些代码会影响性能, 但是 panic 信息会更加详细
+# 一般来说，如果是 release 模式，就设置 panic 为 abort, 如果是 debug 模式，就设置 panic 为 unwind, unwind 为默认值
+# panic = "abort"
+
+# [profile.release]
+# panic = "abort"
