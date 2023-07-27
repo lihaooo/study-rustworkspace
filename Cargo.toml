@@ -12,6 +12,7 @@ members = [
     "collections", # 10, 集合相关的一些练习
     "errors", # 11, 错误处理相关的一些练习
     "generics", # 12, 泛型相关的一些练习
+    "tests", # 13, 测试相关的一些练习
 ]
 
 [profile.release]
