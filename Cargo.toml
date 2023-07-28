@@ -14,6 +14,7 @@ members = [
     "generics", # 12, 泛型相关的一些练习
     "tests", # 13, 测试相关的一些练习
     "mini_grep", # 14, 一个简单的 grep 程序
+    "functional", # 15, 函数式语言相关的一些练习
 ]
 
 [profile.release]
