@@ -44,6 +44,31 @@ impl Config {
             ignore_case,
         })
     }
+    // 优化后的 new 方法, 使用迭代器取代性能不好的 clone
+    pub fn iter_new(mut args: impl Iterator<Item = String>) -> Result<Config, Error> {
+        let mut index = 0;
+        let ignore_case = match env::var("IGNORE_CASE") {
+            Ok(val) => val == "1" || val == "true" || val == "TRUE" || val == "True",
+            Err(_) => false,
+        };
+        let mut cfg = Config {
+            query: String::new(),
+            path: String::new(),
+            ignore_case,
+        };
+        while let Some(arg) = args.next() {
+            match index {
+                1 => cfg.query = arg,
+                2 => cfg.path = arg,
+                _ => Err(Error::new(
+                    ErrorKind::InvalidInput,
+                    "need 2 arguments, [query] [path]",
+                ))?,
+            }
+            index += 1;
+        }
+        Ok(cfg)
+    }
 }
 
 pub fn search<'a>(
@@ -65,12 +90,27 @@ pub fn search<'a>(
             results.push(line);
         }
     }
-    if results.len() == 0 {
-        Err(Error::new(
-            ErrorKind::NotFound,
-            format!("no results found for {query}"),
-        ))?;
-    }
+    Ok(results)
+}
+
+// 使用迭代器改造 search, 用 filter 替代 for 循环, 用 collect 替代 Vec::new, 性能更好
+pub fn filter_search<'a>(
+    ignore_case: bool,
+    query: &str,
+    contents: &'a str,
+) -> Result<Vec<&'a str>, Error> {
+    let results = contents
+        .lines()
+        .filter(|line| {
+            let mut search_line = line.to_string();
+            let mut search_query = query.to_string();
+            if ignore_case {
+                search_line = search_line.to_lowercase();
+                search_query = search_query.to_lowercase();
+            }
+            search_line.contains(&search_query)
+        })
+        .collect();
     Ok(results)
 }
 
