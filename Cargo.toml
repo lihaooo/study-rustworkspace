@@ -17,5 +17,11 @@ members = [
     "functional", # 15, 函数式语言相关的一些练习
 ]
 
+# 开发环境配置
+[profile.dev]
+opt-level = 0 # 为了方便调试, 优化等级设置为 0, dev 的默认值就是 0
+
+# 生产环境配置
 [profile.release]
-panic = "abort"
+panic = "abort" # 一旦出现 panic, 程序就会直接退出
+opt-level = 3 # 优化等级设置为 3, 以获得更好的性能, release 的默认值就是 3

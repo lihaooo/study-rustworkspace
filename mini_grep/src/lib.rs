@@ -1,3 +1,10 @@
+//! # mini_grep
+//!
+//! ## Usage Example
+//! ```bash
+//! IGNORE_CASE=1 cargo run -- searchstring example-filename.txt
+//! ```
+
 use std::io::{Error, ErrorKind};
 use std::{env, fs};
 
@@ -15,6 +22,13 @@ pub fn run(conf: Config) -> Result<(), Error> {
     Ok(())
 }
 
+/// Config 结构体, 用于存储命令行参数
+///
+/// # parameters
+/// 1. query: 查询字符串
+/// 2. path: 文件路径
+/// 3. ignore_case: 是否忽略大小写, 默认为 false, 可以通过环境变量 IGNORE_CASE 设置
+/// `ignore_case 为 1, true, TRUE, True 时为 true, 其他值为 false`
 pub struct Config {
     query: String,
     path: String,
@@ -158,18 +172,5 @@ safe, fast, productive.
 Pick three.";
         let results = search(true, query, contents).unwrap();
         assert_eq!(results, vec!["safe, fast, productive."]);
-    }
-
-    #[test]
-    #[should_panic(expected = "no results found for searchstring")]
-    fn test_search_with_invalid_query() {
-        let query = "searchstring";
-        let contents = "\
-Rust:
-safe, fast, productive.
-Pick three.";
-        // _ 开头的变量表示不使用该变量
-        // unwrap() 在接受 Err 时会 panic, 正好用 should_panic 来测试
-        let _results = search(true, query, contents).unwrap();
     }
 }

@@ -23,7 +23,7 @@ fn main() {
     //     }
     // };
     // 也可以用 unwrap_or_else
-    let conf = mini_grep::Config::new(&args).unwrap_or_else(|err| {
+    let conf = pandastd_mini_grep::Config::new(&args).unwrap_or_else(|err| {
         // eprintln! 会将内容输出到标准错误流, 而不是标准输出流
         // 标准错误流会被输出到终端, 而不会被 shell 重定向
         eprintln!("parse arguments failed: {}", err);
@@ -41,7 +41,7 @@ fn main() {
     // eprintln!("With text:\n{}", contents)
     // [ 优化后 ]
     // 这种写法就很像 go 的错误处理机制, if err != nil { handle err }
-    if let Err(err) = mini_grep::run(conf) {
+    if let Err(err) = pandastd_mini_grep::run(conf) {
         eprintln!("read file failed: {}", err);
         process::exit(1);
     }
