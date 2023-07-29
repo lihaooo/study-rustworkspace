@@ -1,21 +1,22 @@
 [workspace]
 members = [
     "guessing_game", # 01. 一个猜随机生成数字的游戏
-    "variables", # 02, 变量相关的一些练习
-    "functions", # 03, 函数和注释相关的一些练习
-    "branches", # 04, 控制流相关的一些练习
-    "ownership", # 05, 所有权相关的一些练习
-    "structure", # 06, 结构体相关的一些练习
-    "rectangles", # 07, 一个长度形相关的程序, 用于练习结构体和方法
-    "matches", # 08, 枚举, 匹配和 if let 简单控制流
-    "crates", # 09, 模块和包相关的一些练习
-    "collections", # 10, 集合相关的一些练习
-    "errors", # 11, 错误处理相关的一些练习
-    "generics", # 12, 泛型相关的一些练习
-    "tests", # 13, 测试相关的一些练习
-    "mini_grep", # 14, 一个简单的 grep 程序
-    "functional", # 15, 函数式语言相关的一些练习
-    "pointers", # 16, 智能指针相关的一些练习
+    "variables", # 02. 变量相关的一些练习
+    "functions", # 03. 函数和注释相关的一些练习
+    "branches", # 04. 控制流相关的一些练习
+    "ownership", # 05. 所有权相关的一些练习
+    "structure", # 06. 结构体相关的一些练习
+    "rectangles", # 07. 一个矩形相关的程序, 用于练习结构体和方法
+    "matches", # 08. 枚举, 匹配和 if let 简单控制流
+    "crates", # 09. 模块和包相关的一些练习
+    "collections", # 10. 集合相关的一些练习
+    "errors", # 11. 错误处理相关的一些练习
+    "generics", # 12. 泛型相关的一些练习
+    "tests", # 13. 测试相关的一些练习
+    "mini_grep", # 14. 一个简单的 grep 程序, 附加了 cargo 的一些功能和 crates.io 的使用练习
+    "functional", # 15. 函数式语言相关的一些练习
+    "pointers", # 16. 智能指针相关的一些练习
+    "concurrencies", # 17. 并发相关的一些练习
 ]
 
 # 开发环境配置
