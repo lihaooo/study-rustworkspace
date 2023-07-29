@@ -17,6 +17,7 @@ members = [
     "functional", # 15. 函数式语言相关的一些练习
     "pointers", # 16. 智能指针相关的一些练习
     "concurrencies", # 17. 并发相关的一些练习
+    "objects", # 18. 面向对象相关的一些练习
 ]
 
 # 开发环境配置
