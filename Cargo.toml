@@ -15,6 +15,7 @@ members = [
     "tests", # 13, 测试相关的一些练习
     "mini_grep", # 14, 一个简单的 grep 程序
     "functional", # 15, 函数式语言相关的一些练习
+    "pointers", # 16, 智能指针相关的一些练习
 ]
 
 # 开发环境配置
