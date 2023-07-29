@@ -7,7 +7,7 @@ members = [
     "ownership", # 05. 所有权相关的一些练习
     "structure", # 06. 结构体相关的一些练习
     "rectangles", # 07. 一个矩形相关的程序, 用于练习结构体和方法
-    "matches", # 08. 枚举, 匹配和 if let 简单控制流
+    "controls", # 08. 枚举, 匹配和 if let 简单控制流
     "crates", # 09. 模块和包相关的一些练习
     "collections", # 10. 集合相关的一些练习
     "errors", # 11. 错误处理相关的一些练习
