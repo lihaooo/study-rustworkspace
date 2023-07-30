@@ -18,6 +18,7 @@ members = [
     "pointers", # 16. 智能指针相关的一些练习
     "concurrencies", # 17. 并发相关的一些练习
     "objects", # 18. 面向对象相关的一些练习
+    "matches", # 19. 模式匹配相关的一些练习
 ]
 
 # 开发环境配置
